@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron text-center">
+        <h1 class="display-4">Employee Data Management</h1>
+        <h3>A Comprehensive Directory of Employee Billable Hours</h3>
+      </div>
+      <div id="employeeDisplay">
+        <table>
+          <thead id="tableDisplay">
+            <th>Employee Name</th>
+            <th>Role</th>
+            <th>Start Date</th>
+            <th>Months Worked</th>
+            <th>Monthly Rate</th>
+            <th>Total Billed</th>
+          </thead>
+        </table>
+        <hr />
+        <br />
+      </div>
+      <div id="employeeInput">
+        <form id="employeeForm">
+          <div class="form-group">
+            <label>Employee Name</label><br />
+            <input class="form-control" type="text" id="eName" /><br />
+          </div>
+          <div class="form-group">
+            <label>Employee Role</label><br />
+            <input class="form-control" type="text" id="eRole" /><br />
+          </div>
+          <div class="form-group">
+            <label>Start Date (MM/DD/YYYY)</label><br />
+            <input
+              class="form-control"
+              type="date"
+              id="eDate"
+              value="2019-03-14"
+            /><br />
+          </div>
+          <div class="form-group">
+            <label>Monthly Rate</label><br />
+            <input class="form-control" type="number" id="eRate" /><br />
+          </div>
+          <input id="submit" type="submit" value="Add Employee" />
+        </form>
+      </div>
+    </div>
+    <script src="timesheet.js"></script>
+  </body>
+</html>
